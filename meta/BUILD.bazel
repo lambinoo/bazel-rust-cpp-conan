@@ -1,0 +1,11 @@
+# Root BUILD.bazel for Conan integration
+# This file can be extended to define external dependencies or targets as needed.
+
+filegroup(
+    name = "build_all",
+    srcs = [
+        "//rust:hello_world",
+        "//cpp:hello_fmt",
+    ],
+    visibility = ["//visibility:public"],
+)

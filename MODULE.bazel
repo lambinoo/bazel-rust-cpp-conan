@@ -1,0 +1,10 @@
+
+bazel_dep(name = "rules_rust", version = "0.62.0")
+
+crate = use_extension("@rules_rust//crate_universe:extensions.bzl", "crate")
+crate.spec(package = "tokio", default_features = False, features = ["macros", "net", "rt-multi-thread"], version = "1")
+crate.from_specs()
+use_repo(crate, "crates")
+
+load_conan_dependencies = use_extension("//conan:conan_deps_module_extension.bzl", "conan_extension")
+use_repo(load_conan_dependencies, "fmt")

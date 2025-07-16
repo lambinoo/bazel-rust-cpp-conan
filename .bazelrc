@@ -1,0 +1,7 @@
+try-import %workspace%/conan/conan_bzl.rc
+
+build:conan-config
+
+build --config=conan-config
+build --noincompatible_disallow_empty_glob
+query --keep_going

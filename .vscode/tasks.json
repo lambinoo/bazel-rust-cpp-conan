@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++ Hello Fmt (Bazel)",
+            "type": "shell",
+            "command": "bazel build //cpp:hello_fmt",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Rust Hello World (Bazel)",
+            "type": "shell",
+            "command": "bazel build //rust:hello_world",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
